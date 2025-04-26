@@ -1,0 +1,25 @@
+version: '3.7'
+
+networks:
+    west2online:
+        driver: bridge
+
+services:
+
+    mysql:
+        container_name: mysql
+        image: mysql:latest
+        restart: always
+        environment:
+            - MYSQL_ROOT_PASSWORD=root
+            - MYSQL_DATABASE=west2online
+            - MYSQL_USER=west2online
+            - MYSQL_PASSWORD=west2online
+            - TZ=Asia/Shanghai
+        volumes:
+            - ./config/sql:/docker-entrypoint-initdb.d/
+            - ./data/mysql:/var/lib/mysql
+        ports:
+            - "3306:3306"
+        networks:
+            - west2online
