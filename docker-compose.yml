@@ -1,10 +1,24 @@
 version: '3.7'
 
 networks:
-    west2online:
+    ozline:
         driver: bridge
 
 services:
+
+    mongodb:
+        image: mongo:latest
+        container_name: mongodb
+        restart: always
+        ports:
+            - "27017:27017"
+        environment:
+            - MONGO_INITDB_ROOT_USERNAME=root
+            - MONGO_INITDB_ROOT_PASSWORD=example
+        volumes:
+            - ./data/mongodb:/data/db
+        networks:
+            - ozline
 
     mysql:
         container_name: mysql
@@ -12,9 +26,9 @@ services:
         restart: always
         environment:
             - MYSQL_ROOT_PASSWORD=root
-            - MYSQL_DATABASE=west2online
-            - MYSQL_USER=west2online
-            - MYSQL_PASSWORD=west2online
+            - MYSQL_DATABASE=ozline
+            - MYSQL_USER=ozline
+            - MYSQL_PASSWORD=ozline
             - TZ=Asia/Shanghai
         volumes:
             - ./config/sql:/docker-entrypoint-initdb.d/
@@ -22,4 +36,7 @@ services:
         ports:
             - "3306:3306"
         networks:
-            - west2online
+            - ozline
+
+
+# 删除 mongodb_data 数据卷：docker compose down -v 或者 docker volume rm mongodb_data

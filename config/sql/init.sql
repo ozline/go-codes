@@ -1,4 +1,4 @@
-create table west2online.`user`
+create table ozline.`user`
 (
     `id`               bigint auto_increment not null,
     `username`         varchar(255)                                                                 not null,
