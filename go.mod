@@ -1,6 +1,6 @@
 module github.com/ozline/go-codes
 
-go 1.23 // 这个版本直接人工替换就可以了
+go 1.24.4 // 这个版本直接人工替换就可以了
 
 require (
 	github.com/aliyun/aliyun-oss-go-sdk v3.0.1+incompatible
