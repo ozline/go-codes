@@ -30,5 +30,4 @@ func TestJSONSensitive() {
 	}
 
 	fmt.Printf("%v\n", temp.UserID)
-	return
 }

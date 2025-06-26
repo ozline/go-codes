@@ -32,8 +32,6 @@ func MergeMaps() {
 	// 1.21 后直接用 maps.Copy() 是支持使用接口类型的
 
 	// 也可以使用下面的 mergeMaps 函数手动合并
-
-	return
 }
 
 // nolint

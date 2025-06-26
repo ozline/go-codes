@@ -92,6 +92,6 @@ func runExcelizeWrite() {
 		panic(err)
 	}
 
-	fmt.Println(fmt.Sprintf("https://%s/%s/%s", Endpoint, MainDirectory, xlsxFilename))
+	fmt.Printf("https://%s/%s/%s\n", Endpoint, MainDirectory, xlsxFilename)
 
 }
