@@ -7,6 +7,7 @@ package code
 import (
 	"fmt"
 	"sync"
+	"testing"
 )
 
 var (
@@ -14,7 +15,7 @@ var (
 	mu       sync.Mutex
 )
 
-func CallbackManager() {
+func TestCallbackManager(t *testing.T) {
 
 	Register(foo1, "foo1")
 	Register(foo2, "foo2")

@@ -8,6 +8,7 @@ import (
 	"bytes"
 	"fmt"
 	"os"
+	"testing"
 	"time"
 
 	"github.com/dchest/captcha"
@@ -17,7 +18,7 @@ var code string
 var buf bytes.Buffer
 var buf2 bytes.Buffer
 
-func RunCaptcha() {
+func TestCaptcha(t *testing.T) {
 
 	captcha.SetCustomStore(captcha.NewMemoryStore(100, 10*time.Minute))
 

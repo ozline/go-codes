@@ -10,9 +10,10 @@ import (
 	"image/jpeg"
 	"image/png"
 	"os"
+	"testing"
 )
 
-func RunWaterMark() {
+func TestWaterMark(t *testing.T) {
 	imgFile, err := os.Open("image/testimg.jpg")
 	if err != nil {
 		panic(err)

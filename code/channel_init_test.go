@@ -4,6 +4,7 @@ package code
 
 import (
 	"fmt"
+	"testing"
 )
 
 var (
@@ -11,7 +12,7 @@ var (
 	NotInitChannel chan int            // 未初始化的 channel
 )
 
-func ChannelInit() {
+func TestChannelInit(t *testing.T) {
 	defer func() {
 		if r := recover(); r != nil {
 			fmt.Println("Recovered in main", r)

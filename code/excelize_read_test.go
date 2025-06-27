@@ -4,12 +4,13 @@ package code
 
 import (
 	"fmt"
+	"testing"
 	"time"
 
 	"github.com/xuri/excelize/v2"
 )
 
-func RunExcelizeRead() {
+func TestExcelizeRead(t *testing.T) {
 	f, err := excelize.OpenFile("example.xlsx")
 
 	if err != nil {

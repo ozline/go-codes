@@ -6,6 +6,7 @@ package code
 
 import (
 	"fmt"
+	"testing"
 
 	jsonpatch "github.com/evanphx/json-patch"
 )
@@ -15,7 +16,7 @@ type point struct {
 	y float32
 }
 
-func TestJSONPatch() {
+func TestJSONPatch(t *testing.T) {
 	original := []byte(`{"k": "v"}`)
 	modified := []byte(`{"k": "v"}`)
 

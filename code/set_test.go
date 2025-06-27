@@ -4,7 +4,10 @@ package code
 	go 的 set 实现，底层是个 map，看了一下八股，读写都是 O（1），性能 ok
 */
 
-import "fmt"
+import (
+	"fmt"
+	"testing"
+)
 
 type Set[T comparable] struct {
 	elements map[T]struct{}
@@ -44,7 +47,7 @@ func (s *Set[T]) Elements() []T {
 	return keys
 }
 
-func TestSet() {
+func TestSet(t *testing.T) {
 
 	set := NewSet[int]()
 	set.Add(1)

@@ -6,6 +6,7 @@ import (
 	"bytes"
 	"fmt"
 	"math/rand"
+	"testing"
 
 	"github.com/aliyun/aliyun-oss-go-sdk/oss"
 	"github.com/xuri/excelize/v2"
@@ -27,7 +28,7 @@ func (bw *BufferWriters) Write(p []byte) (n int, err error) {
 	return bw.Buffer.Write(p)
 }
 
-func runExcelizeWrite() {
+func TestExcelizeWrite(t *testing.T) {
 	f := excelize.NewFile()
 
 	defer func() {

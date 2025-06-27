@@ -7,13 +7,14 @@ package code
 import (
 	"encoding/json"
 	"fmt"
+	"testing"
 )
 
 type TestJSON struct {
 	UserID string `json:"UserID"`
 }
 
-func TestJSONSensitive() {
+func TestJSONSensitive(t *testing.T) {
 	var a = `{"UserID": "111234", "UserId": "222222", "UserID": "33333", "userid": "44444"}`
 
 	// 主要是大小写不敏感问题，会匹配到最后一个，也就是 userid 这个东西

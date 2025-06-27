@@ -17,9 +17,10 @@ package code
 
 import (
 	"fmt"
+	"testing"
 )
 
-func RunDeferDemo() {
+func TestDefer(t *testing.T) {
 	fmt.Println(test1())
 	fmt.Println(test2())
 	fmt.Println(test3())

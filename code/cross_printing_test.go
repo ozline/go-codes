@@ -5,9 +5,10 @@ package code
 
 import (
 	"fmt"
+	"testing"
 )
 
-func CrossPrinting() {
+func TestCrossPrinting(t *testing.T) {
 	numChan := make(chan struct{})
 	letterChan := make(chan struct{})
 

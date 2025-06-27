@@ -34,7 +34,7 @@ func MergeMaps() {
 	// 也可以使用下面的 mergeMaps 函数手动合并
 }
 
-// nolint
+// nolint:unused
 func mergeMaps(dst, src map[string]int) {
 	for key, value := range src {
 		dst[key] = value

@@ -1,0 +1,7 @@
+{
+    "gopls": {
+        "analyses": {
+            "unusedfunction": false
+        }
+    }
+}

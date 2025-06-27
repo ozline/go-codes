@@ -6,11 +6,12 @@ package code
 
 import (
 	"log"
+	"testing"
 
 	"github.com/fsnotify/fsnotify"
 )
 
-func RunTestWatcher() {
+func TestWatcher(t *testing.T) {
 	watcher, err := fsnotify.NewWatcher()
 
 	if err != nil {

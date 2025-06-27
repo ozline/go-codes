@@ -5,6 +5,7 @@ package code
 import (
 	"fmt"
 	"sync"
+	"testing"
 	"time"
 )
 
@@ -36,7 +37,7 @@ func main() {
 }
 
 // 优雅关闭-仅一个发送方
-func GracefulShutdown() {
+func TestGracefulShutdown(t *testing.T) {
 	ch := make(chan int)
 
 	// 启动一个 goroutine 发送数据
