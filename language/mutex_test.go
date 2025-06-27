@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"sync"
 	"sync/atomic"
+	"testing"
 )
 
 // 定义一个复数类型
@@ -29,7 +30,7 @@ var (
 // 设计中，执行顺序应该是：foo1 和 foo2 同时执行，foo3 等待 foo1 和 foo2 执行完毕，foo4 等待 foo3 执行完毕
 // 有难点的实际上是 mutex_y1 和 mutex_y2
 
-func testMain() {
+func TestMutex(t *testing.T) {
 	// 运行 10 次
 	var allRight bool = true
 	for i := 0; i < 10; i++ {

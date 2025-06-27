@@ -17,8 +17,8 @@ var (
 
 func TestCallbackManager(t *testing.T) {
 
-	Register(foo1, "foo1")
-	Register(foo2, "foo2")
+	Register(callbackFoo1, "foo1")
+	Register(callbackFoo2, "foo2")
 
 	if err := Deregister("foo1"); err != nil {
 		panic(err)
@@ -49,6 +49,6 @@ func Deregister(key string) error {
 	return nil
 }
 
-func foo1() { fmt.Println("foo1") }
+func callbackFoo1() { fmt.Println("foo1") }
 
-func foo2() { fmt.Println("foo2") }
+func callbackFoo2() { fmt.Println("foo2") }
