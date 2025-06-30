@@ -10,5 +10,6 @@
 | benchmark | 一些使用 go 实现的压测           |
 | implement | 一些 go 的库使用 demo            |
 | language  | 一些 go 的语法特性分析           |
+| os        | 一些 go 的 os 相关代码，如栈分析 |
 
 其他的则是一些附属目录，比如为了完成 benchmark，我们需要导入 sql，所以有了`config/sql`这个目录
