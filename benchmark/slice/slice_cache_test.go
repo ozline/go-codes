@@ -21,7 +21,7 @@ import (
 */
 
 func BenchmarkSliceInt2String4(t *testing.B) {
-	for i := 0; i < t.N; i++ {
+	for t.Loop() {
 		SliceInt2String4([][]int{
 			{1, 2, 3},
 			{4, 5, 6},
@@ -31,7 +31,7 @@ func BenchmarkSliceInt2String4(t *testing.B) {
 }
 
 func BenchmarkSliceInt2String5(t *testing.B) {
-	for i := 0; i < t.N; i++ {
+	for t.Loop() {
 		SliceInt2String5([][]int{
 			{1, 2, 3},
 			{4, 5, 6},

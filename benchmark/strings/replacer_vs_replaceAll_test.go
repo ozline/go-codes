@@ -16,7 +16,7 @@ func BenchmarkReplaceAll(b *testing.B) {
 	new := "hi"
 
 	// 基准测试 strings.ReplaceAll
-	for i := 0; i < b.N; i++ {
+	for b.Loop() {
 		_ = strings.ReplaceAll(input, old, new)
 	}
 }
@@ -31,7 +31,7 @@ func BenchmarkReplacer(b *testing.B) {
 	replacer := strings.NewReplacer(old, new)
 
 	// 基准测试 strings.Replacer
-	for i := 0; i < b.N; i++ {
+	for b.Loop() {
 		_ = replacer.Replace(input)
 	}
 }
