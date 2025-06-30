@@ -5,6 +5,7 @@ package code
 import (
 	"container/heap"
 	"fmt"
+	"testing"
 )
 
 type MinHeap []int
@@ -25,7 +26,7 @@ func (h *MinHeap) Pop() any {
 	return x
 }
 
-func TestHeap() {
+func TestHeap(t *testing.T) {
 	h := &MinHeap{2, 1, 5}
 	heap.Init(h) // 初始化堆
 

@@ -20,7 +20,7 @@ func TestChannelInit(t *testing.T) {
 	}()
 	// 事实上没有观测到 Panic，我不知道是不是 go 版本的问题，至少在 1.19的时候没有观测到
 
-	Test10()
+	tempTest()
 
 	// 测试已初始化的 Channel
 	WriteToChannel(InitChannel) // 正常
@@ -66,7 +66,7 @@ func ClosedChannelTest() {
 	closedChannel <- 30 // 这里会 panic
 }
 
-func Test10() {
+func tempTest() {
 	const (
 		x = iota
 		_

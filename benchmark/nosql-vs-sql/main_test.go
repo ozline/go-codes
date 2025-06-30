@@ -26,6 +26,14 @@ var (
 )
 
 func TestMain(m *testing.M) {
+	// 检查是否传入了 -test.run 参数（即运行测试函数）
+	for _, arg := range os.Args {
+		if arg == "-test.run" {
+			// 如果是运行测试，直接退出 TestMain，让测试函数正常执行
+			os.Exit(m.Run())
+		}
+	}
+
 	// MongoDB
 	client, err := mongo.Connect(context.TODO(), options.Client().ApplyURI(mongoURI))
 	if err != nil {
