@@ -2,14 +2,25 @@ module github.com/ozline/go-codes
 
 go 1.24.4 // 这个版本直接人工替换就可以了
 
+// algorithm 使用
 require (
-	github.com/aliyun/aliyun-oss-go-sdk v3.0.1+incompatible
-	github.com/dchest/captcha v1.0.0
-	github.com/evanphx/json-patch v0.5.2
-	github.com/fsnotify/fsnotify v1.6.0
-	github.com/go-sql-driver/mysql v1.9.2
-	github.com/xuri/excelize/v2 v2.8.0
-	go.mongodb.org/mongo-driver v1.17.3
+	github.com/bits-and-blooms/bitset v1.22.0 // alogirhtm
+	github.com/twmb/murmur3 v1.1.8 // algorithm
+)
+
+// benchmark 使用
+require (
+	github.com/go-sql-driver/mysql v1.9.2 // benchmark
+	go.mongodb.org/mongo-driver v1.17.3 // benchmark
+)
+
+// implement 使用
+require (
+	github.com/aliyun/aliyun-oss-go-sdk v3.0.1+incompatible // implement
+	github.com/dchest/captcha v1.0.0 // implement
+	github.com/evanphx/json-patch v0.5.2 // implement
+	github.com/fsnotify/fsnotify v1.6.0 // implement
+	github.com/xuri/excelize/v2 v2.8.0 // implement
 )
 
 require (
