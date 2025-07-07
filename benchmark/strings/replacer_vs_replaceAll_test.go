@@ -9,6 +9,13 @@ import (
 
 // 测试结果表明起码提升 1 倍以上的性能
 
+/*
+	strings.ReplaceAll: 遍历整个子串，逐个查找目标子串并替换，每次调用时都会从头开始执行
+	strings.Replacer：预先创建一个 Replacer 对象，内部维护了一个缓存，可以在多次替换时复用这个对象，从而减少重复的查找和替换操作
+
+	replacer 的内部数据结构（1.24）
+*/
+
 func BenchmarkReplaceAll(b *testing.B) {
 	// 测试数据
 	input := "hello world, hello gopher, hello universe"
