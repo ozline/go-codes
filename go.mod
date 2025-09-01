@@ -1,6 +1,6 @@
 module github.com/ozline/go-codes
 
-go 1.24.4 // 这个版本直接人工替换就可以了
+go 1.25
 
 replace github.com/ozline/go-codes/language/init_test/multi_package_init => ./language/init_test/multi_package_init
 
