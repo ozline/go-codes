@@ -16,10 +16,6 @@ language/heap_escape_test.go:26:15: make(map[int]*MyStruct) escapes to heap
 language/heap_escape_test.go:29:23: &MyStruct{...} escapes to heap
 */
 
-type MyStruct struct {
-	Value int
-}
-
 // 一个函数将结构体存入 map，并返回指针
 func processData(id int, cache map[int]*MyStruct) *MyStruct {
 	// 创建结构体并取地址
